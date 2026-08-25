@@ -127,3 +127,5 @@ The outputs of this milestone provide the baseline for **M2 — Data Model & Bas
 **Milestone: M1 — Project Kick-off & Requirements Gathering**
 
 **Status: Completed**
+<img width="1911" height="692" alt="image" src="https://github.com/user-attachments/assets/485aaa29-1461-45be-8d02-8a9121bc0fab" />
+
