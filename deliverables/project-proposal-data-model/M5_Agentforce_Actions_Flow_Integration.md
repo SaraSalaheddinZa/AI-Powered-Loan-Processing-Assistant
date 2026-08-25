@@ -1,9 +1,3 @@
----
-generator: pandoc
-title: "-"
-viewport: width=device-width, initial-scale=1.0, user-scalable=yes
----
-
 # M5. Agentforce Actions & Flow Integration
 
 ## Project
@@ -93,19 +87,8 @@ action for every field. The Agent first collects the required values.
 After the information is complete and confirmed, the **Create Loan
 Application** action passes those values to the Flow.
 
-### Screenshot
-
-**\[Insert Screenshot --- Create Loan Application Agent Action
-configuration\]**
-
-*Figure 1. Create Loan Application Agent Action configured under the
-Collect Applicant Information topic.*
-
-**\[Insert Screenshot --- Agent Action input/output mapping\]**
-
-*Figure 2. Input and output mapping for the Create Loan Application
-action.*
-
+<img width="1919" height="763" alt="image" src="https://github.com/user-attachments/assets/cc11222f-39c6-495a-99d5-a52c8487a72d" />
+The screen flow collects the required loan information, creates the Loan Application record, and displays a confirmation screen after successful creation.
 ------------------------------------------------------------------------
 
 # 5.2 Screen Flow for Loan Application Creation
@@ -143,12 +126,8 @@ The Flow collects:
                                       Application record
   -----------------------------------------------------------------------
 
-### Screenshot
-
-**\[Insert Screenshot --- Flow variables\]**
-
-*Figure 3. Variables used by the Create Loan Application Screen Flow -
-V1.*
+<img width="1911" height="738" alt="image" src="https://github.com/user-attachments/assets/f76d7f72-64f4-4641-a56d-5be91245e4f1" />
+The screen flow collects the required loan information, creates the Loan Application record, and displays a confirmation screen after successful creation.
 
 ------------------------------------------------------------------------
 
@@ -165,12 +144,8 @@ The screen collects the information required to submit the application.
   Requested Loan Amount   `varLoanAmount`
   Loan Type               `varLoanType`
 
-### Screenshot
+<img width="1900" height="790" alt="image" src="https://github.com/user-attachments/assets/e17450e3-4551-4530-9d03-36db9785a8a6" />
 
-**\[Insert Screenshot --- Loan Application Form\]**
-
-*Figure 4. Loan Application Form used to collect the required
-application information.*
 
 ------------------------------------------------------------------------
 
@@ -183,11 +158,7 @@ The information collected from the screen is passed into the
 corresponding Loan Application fields. This is the point where the
 information collected from the user becomes an actual Salesforce record.
 
-### Screenshot
-
-**\[Insert Screenshot --- Create Records element\]**
-
-*Figure 5. Create Loan Application Record element in the Flow.*
+<img width="1096" height="826" alt="image" src="https://github.com/user-attachments/assets/08ad014b-87b2-45a1-836c-d6557fe95a95" />
 
 ------------------------------------------------------------------------
 
@@ -198,12 +169,8 @@ After the record is created, the Flow displays a confirmation screen.
 The created record ID is stored in `varCreatedLoanId`, allowing the Flow
 to keep the identifier of the new Loan Application.
 
-### Screenshot
+<img width="1869" height="791" alt="image" src="https://github.com/user-attachments/assets/f3afafe9-6202-4d71-bea8-e153c314935b" />
 
-**\[Insert Screenshot --- Confirmation Screen\]**
-
-*Figure 6. Confirmation screen displayed after the Loan Application
-record is created.*
 
 ------------------------------------------------------------------------
 
@@ -221,11 +188,7 @@ Confirmation Screen
 End
 ```
 
-### Screenshot
-
-**\[Insert Screenshot --- Complete Flow Canvas\]**
-
-*Figure 7. Complete Create Loan Application Screen Flow - V1 canvas.*
+<img width="1904" height="760" alt="image" src="https://github.com/user-attachments/assets/009706ee-9efd-44df-a179-af85995da1c3" />
 
 ------------------------------------------------------------------------
 
@@ -298,17 +261,11 @@ The test checked that:
     conversation.
 10. The Agent provides confirmation after the process is completed.
 
-### Screenshot
+<img width="1917" height="817" alt="Screenshot 2026-08-25 043100" src="https://github.com/user-attachments/assets/70deaf9e-67e8-46d0-8244-f1c70eaae352" />
 
-**\[Insert Screenshot --- End-to-end Agentforce conversation\]**
 
-*Figure 8. Agentforce conversation showing the loan application
-information being collected and the creation process being completed.*
+<img width="1919" height="639" alt="image" src="https://github.com/user-attachments/assets/454e205c-4f6f-4880-882e-11a155bf9104" />
 
-**\[Insert Screenshot --- Created Loan Application record\]**
-
-*Figure 9. Loan Application record created through the Agentforce and
-Flow integration.*
 
 ------------------------------------------------------------------------
 
