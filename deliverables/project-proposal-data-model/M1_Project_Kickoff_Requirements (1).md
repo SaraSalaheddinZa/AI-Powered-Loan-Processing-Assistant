@@ -88,14 +88,14 @@ Setup → Company Information, with Organization Edition visible as Developer Ed
 
 ## M1 Deliverables and Outcomes
 
-| Requirement | Outcome |
+| **Requirement** | **Outcome** |
 |---|---|
-| Team Formation and Role Assignment | Project responsibilities defined. |
-| Communication Protocol | Project coordination and documentation practices established. |
-| Requirement Gathering | Core loan-processing requirements identified. |
-| User Stories | Applicant and loan officer user stories documented. |
-| Essential Data Fields | Applicant Name, Contact, Loan Amount, Loan Type, and Application Status identified. |
-| Salesforce Org Setup | Salesforce development workspace established for implementation. |
+| Project Ownership and Responsibilities | The project was completed individually, with planning, Salesforce configuration, development, testing, documentation, and deliverables handled by me. |
+| Communication and Project Tracking | Project work was tracked through milestones, tasks, documentation, and the GitHub repository. |
+| Requirement Gathering | The main requirements for the simplified loan application process were identified. |
+| User Stories | Applicant and loan officer user stories were documented. |
+| Essential Data Fields | Applicant Name, Contact Email, Annual Income, Loan Amount, Loan Type, Application Status, Employment Status, and Risk Score were identified for the loan application. |
+| Salesforce Org Setup | A Salesforce Developer Edition org was used as the development and testing environment. |
 
 ---
 
