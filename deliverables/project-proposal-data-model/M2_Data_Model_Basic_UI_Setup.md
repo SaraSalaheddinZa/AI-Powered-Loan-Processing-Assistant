@@ -39,12 +39,7 @@ The selected fields support the main information needed to create, review, proce
 
 ### Evidence
 
-Insert a screenshot of:
-
-- Salesforce Setup → Object Manager → Loan Application → Fields & Relationships.
-- The list showing the custom fields and their data types.
-
-**[SCREENSHOT — Loan Application Fields & Relationships]**
+<img width="1900" height="623" alt="image" src="https://github.com/user-attachments/assets/1b8d6610-99ae-4e13-aed7-b351044a8aa0" />
 
 ---
 
@@ -65,13 +60,7 @@ The Lightning App provides the main user interface for working with the loan app
 
 ### Evidence
 
-Insert a screenshot showing:
-
-- App Launcher or Lightning App navigation.
-- The **Loan Processing Assistant** app.
-- The **Loan Application** item in the navigation.
-
-**[SCREENSHOT — Loan Processing Assistant App Navigation]**
+<img width="1901" height="693" alt="image" src="https://github.com/user-attachments/assets/1d595cb0-2f81-42f3-833e-b99eb2c64e61" />
 
 ---
 
@@ -83,16 +72,6 @@ The record page is used to display the important loan application information in
 
 The page includes the relevant Loan Application fields and standard Salesforce components needed to view and work with a loan application record.
 
-### Evidence
-
-Insert screenshots showing:
-
-1. The Lightning App Builder configuration for the Loan Application Record Page.
-2. The activated Loan Application record page in Salesforce.
-
-**[SCREENSHOT — Lightning App Builder / Loan Application Record Page]**
-
-**[SCREENSHOT — Loan Application Record Page in Salesforce]**
 
 ---
 
