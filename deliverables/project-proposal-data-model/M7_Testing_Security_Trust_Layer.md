@@ -1,16 +1,10 @@
 
-# M7 Testing Security Trust Layer
-:::
-
 # M7. Testing, Security & Trust Layer
 
 ## Project
 
 **AI-Powered Loan Processing Assistant**
 
-## Milestone
-
-**M7 --- Testing, Security & Trust Layer**
 
 ------------------------------------------------------------------------
 
