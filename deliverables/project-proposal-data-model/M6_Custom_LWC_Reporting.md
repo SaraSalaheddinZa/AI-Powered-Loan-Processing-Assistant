@@ -257,33 +257,5 @@ The total represented in the reports is **\$1,095,000**.
 <img width="1919" height="416" alt="image" src="https://github.com/user-attachments/assets/36cfe588-3be7-4564-b560-9b9b0ec46ae3" />
 
 
-------------------------------------------------------------------------
 
-# M6 Deliverables and Outcomes
-
-  -----------------------------------------------------------------------
-  Requirement                         Outcome
-  ----------------------------------- -----------------------------------
-  Basic Custom Lightning Web          Created the Loan Application
-  Component                           Tracking LWC and added it to the
-                                      Loan Application page.
-
-  LWC Data Display                    The component displays application
-                                      name, applicant name, loan amount,
-                                      status, and loan type.
-
-  Reports on Loan Applications        Created reports for loan
-                                      applications by status and by loan
-                                      type.
-
-  Dashboard Creation                  Created the Loan Processing
-                                      Overview dashboard using the loan
-                                      application reports.
-
-  Data Visibility                     The LWC, reports, and dashboard
-                                      provide different ways to view the
-                                      current loan application data.
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
 
