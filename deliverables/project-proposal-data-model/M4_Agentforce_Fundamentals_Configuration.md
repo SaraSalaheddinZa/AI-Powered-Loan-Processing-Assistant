@@ -10,10 +10,8 @@
 
 ## Overview
 
-This milestone focuses on setting up the Agentforce foundation for the **AI-Powered Loan Processing Assistant**.
-
-The goal was to create an Agentforce assistant that can communicate with users in a simple and clear way, understand the main information needed for a loan application, and guide the user through the initial loan-processing conversation.
-
+In this milestone, I configured the Agentforce assistant for the loan application project. I created the agent, added the required topics, and tested the instructions to make sure the agent could collect the information needed for a loan application.
+The main goal of this milestone was to set up the Loan Assistant Agent and configure it for the loan application use case. I focused on creating the agent, adding the required topics, and testing the instructions before moving to the Agentforce actions and Flow integration.
 The configuration was completed in the Salesforce **Developer Edition** used for the project.
 
 ---
@@ -37,21 +35,14 @@ The **Loan Assistant Agent** is intended to act as the first point of interactio
 
 ### Configuration Approach
 
-The agent was configured with the project in mind rather than as a general-purpose chatbot. Its role is limited to the loan-processing scenario and focuses on:
+I kept the agent focused on the loan application process. The idea was to make it ask for the main information needed from an applicant instead of trying to answer unrelated questions.
+- Collect the basic applicant information.
+- Ask for the loan amount and loan type.
+- Confirm the information provided by the user.
+- Keep the conversation focused on the loan application.
+- Prepare the agent for the next integration step.
 
-- Understanding basic loan application requests.
-- Asking for the information required to start a loan application.
-- Keeping questions clear and easy to answer.
-- Guiding the user through the required information step by step.
-- Preparing the information for the later Flow and Agentforce integration.
-
-### Screenshot Evidence
-
-**Screenshot 1 — Loan Assistant Agent**
-
-> Insert a screenshot showing the Agentforce setup page with the **Loan Assistant Agent** selected or created.
-
-**Suggested caption:**  
+<img width="1910" height="836" alt="image" src="https://github.com/user-attachments/assets/f9f04d22-2c88-4d04-830b-135e47b54532" />
 *Figure 1. Loan Assistant Agent created in the Salesforce Developer Edition.*
 
 ---
@@ -62,7 +53,7 @@ The agent was configured with the project in mind rather than as a general-purpo
 
 After creating the agent, the next step was to define the main topics that the assistant should handle.
 
-For this project, the topics were kept focused on the basic loan application process. The assistant does not need to handle every possible banking question. Instead, it should concentrate on collecting and explaining the information relevant to the loan application workflow.
+I created the topics around the information that the agent needs during the first stage of a loan application. I kept the topics limited to the project requirements so the agent has a clear purpose.
 
 ### Main Agent Topics
 
@@ -143,35 +134,24 @@ The assistant is designed to support the process, not replace a human loan offic
 
 ## Agent Instructions
 
-The overall instructions for the assistant follow a simple conversational approach.
-
+I configured the agent instructions to keep the conversation short and focused. The agent asks for missing information, uses information already provided, and confirms the important loan details before continuing.
 The agent should:
 
-- Be clear and professional.
-- Ask one or a small number of related questions at a time.
-- Use the information already provided by the user instead of repeatedly asking for it.
-- Confirm important values such as loan amount and loan type.
-- Ask follow-up questions when required information is missing.
+- Ask for missing information.
+- Avoid asking for information that the user already provided.
+- Confirm the loan amount and loan type.
 - Keep the conversation related to the loan application.
-- Avoid inventing customer information.
-- Avoid making unsupported loan approval or rejection decisions.
-- Guide the user toward the next step in the application process.
+- Do not make loan approval or rejection decisions.
+- Keep the conversation related to the loan application.
+- Move the user to the next step after collecting the required information.
 
-### Screenshot Evidence
-
-**Screenshot 2 — Agent Topics**
-
-> Insert a screenshot showing the Agentforce topics configured for the **Loan Assistant Agent**.
-
-**Suggested caption:**  
+<img width="1908" height="791" alt="image" src="https://github.com/user-attachments/assets/9423cd1d-9b73-468d-b234-7f7f6105606b" />
 *Figure 2. Agent topics configured for the loan-processing use case.*
 
-**Screenshot 3 — Topic Instructions**
+<img width="1900" height="818" alt="image" src="https://github.com/user-attachments/assets/f3c17b4b-18df-48af-a635-14c2f2796d2b" />
 
-> Insert a screenshot showing one of the configured topics and its instructions.
+<img width="1902" height="818" alt="image" src="https://github.com/user-attachments/assets/e314247e-6fba-4f85-8e9a-5d58e4e12ae8" />
 
-**Suggested caption:**  
-*Figure 3. Instructions configured for an Agentforce loan-processing topic.*
 
 ---
 
@@ -179,127 +159,20 @@ The agent should:
 
 ### Objective
 
-The prompts were designed to keep the conversation simple and predictable.
-
+For the prompts, I focused on making the questions short and easy to answer. I tested the wording around the main fields such as applicant name, loan amount, and loan type.
 The project does not require the assistant to provide complex financial advice. The main purpose of the prompts is to help the agent collect the correct information and guide the user through the loan application process.
 
 ### Prompt Design Principles
 
-The prompts follow several simple principles:
-
-1. **Clarity**  
-   Questions should be easy for a normal user to understand.
-
-2. **One step at a time**  
-   The assistant should avoid overwhelming the user with a long list of questions.
-
-3. **Confirmation**  
-   Important information should be confirmed before moving forward.
-
-4. **Context awareness**  
-   The assistant should use information that the user has already provided.
-
-5. **Controlled scope**  
-   The assistant should stay within the loan-processing use case.
-
-6. **No unsupported decisions**  
-   The assistant should not claim that an application has been approved or rejected unless the Salesforce process provides that result.
-
+The main points I considered when writing the prompts were:
+- Keep questions clear.
+- Ask for the required information step by step.
+- Confirm important values.
+- Use information already provided by the user.
+- Keep the agent within the loan application scope.
 ---
 
-## Example Conversation Prompts
-
-### Applicant Name
-
-A simple prompt can be used to collect the applicant's name:
-
-> "To start your loan application, may I have your full name?"
-
-If the user provides the name, the assistant should acknowledge it and continue to the next required field.
-
----
-
-### Loan Amount
-
-The assistant can ask:
-
-> "How much would you like to apply for?"
-
-The response should be treated as the requested loan amount and confirmed before continuing.
-
----
-
-### Loan Type
-
-The assistant can ask:
-
-> "What type of loan would you like to apply for?"
-
-The assistant should use the available loan types configured in Salesforce rather than inventing unsupported values.
-
----
-
-### Confirmation
-
-Before moving to the next stage, the assistant can confirm the collected information:
-
-> "I have your application information. You requested a [loan type] loan for [loan amount]. Would you like to continue?"
-
-This helps reduce mistakes before the information is passed to the next part of the application process.
-
----
-
-## Agent Conversation Behavior
-
-A typical interaction for this project follows this pattern:
-
-```text
-User:
-I want to apply for a loan.
-
-Agent:
-Sure. I can help you start a loan application.
-May I have your full name?
-
-User:
-Sara Salaheddin.
-
-Agent:
-Thank you, Sara. What type of loan would you like to apply for?
-
-User:
-Personal.
-
-Agent:
-How much would you like to apply for?
-
-User:
-250000.
-
-Agent:
-Thank you. I have a Personal Loan request for 250,000.
-Let's continue with the remaining application information.
-```
-
-The exact conversation can vary depending on what the user provides, but the general approach remains the same: **collect → confirm → continue**.
-
----
-
-## Agentforce Configuration Evidence
-
-The following screenshots can be used as evidence for this milestone.
-
-### Screenshot Checklist
-
-| # | Evidence | Screenshot |
-|---|---|---|
-| 1 | Agentforce setup / Loan Assistant Agent | Required |
-| 2 | Agent topics | Required |
-| 3 | Topic instructions | Required |
-| 4 | Prompt / instruction configuration | Recommended |
-| 5 | Agent preview or test conversation | Recommended |
-
-> **Note:** The screenshots should show the actual Salesforce configuration used in the project. They do not need to show every click made during setup; the final configured state is sufficient evidence.
+<img width="1917" height="817" alt="image" src="https://github.com/user-attachments/assets/fc3f7f5d-149d-4637-b84c-9fc6b6fd7f4e" />
 
 ---
 
@@ -316,35 +189,9 @@ The following screenshots can be used as evidence for this milestone.
 
 ## Result
 
-At the end of M4, the Salesforce project had a working Agentforce foundation for the **AI-Powered Loan Processing Assistant**.
+By the end of M4, I had created the Loan Assistant Agent and configured the main topics and instructions needed for the loan application process. I also prepared the agent for the next milestone, where it will be connected to Agentforce Actions and the loan creation Flow.
 
-The agent has a defined role, focused topics, and instructions that match the project's loan application process. The configuration also prepares the project for the next milestone, where Agentforce will be connected to actions and the loan application creation Flow.
 
-The next stage, **M5 — Agentforce Actions & Flow Integration**, will use this foundation to connect the conversational assistant with Salesforce automation so that information collected during the conversation can be used in the actual loan application process.
-
----
-
-## Evidence Summary
-
-The M4 implementation is supported by the Salesforce Agentforce configuration and the corresponding screenshots included with this deliverable.
-
-**Recommended GitHub evidence structure:**
-
-```text
-M4_Agentforce_Fundamentals_Configuration.md
-│
-├── Agentforce Agent
-├── Agent Topics
-├── Topic Instructions
-├── Prompt Configuration
-└── Agent Testing / Preview
-```
-
----
-
-## Conclusion
-
-M4 established the AI layer of the project.
 
 Instead of building the loan application process only through traditional Salesforce screens, the project now has an Agentforce assistant that can interact with the user conversationally and guide the initial loan application process.
 
