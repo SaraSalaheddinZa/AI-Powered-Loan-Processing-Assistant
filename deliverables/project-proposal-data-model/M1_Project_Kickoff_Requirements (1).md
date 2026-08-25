@@ -4,51 +4,33 @@
 **AI-Powered Loan Processing Assistant**
 
 ## Milestone Purpose
-M1 establishes the foundation of the project by defining the project scope, identifying the main user stories, documenting the essential loan application data, establishing project responsibilities and communication practices, and preparing the Salesforce development environment.
+M1 establishes the foundation of the project by defining the main requirements, identifying the users involved in the loan application process, listing the information that needs to be stored, and confirming the Salesforce environment used for development.
+The work completed in this milestone is used as the starting point for the next milestones, where the requirements are implemented in Salesforce.
 
 ---
 
-## 1.1 Team Formation and Role Assignment
+## 1.1 Project Ownership and Responsibilities
 
-The project responsibilities are organized around the following roles:
-
-| Role | Responsibility |
+This project was completed individually. I was responsible for the planning, Salesforce configuration, development, testing, documentation, and preparation of the final project deliverables.
+Since the project was completed individually, the responsibilities normally divided between a Project Lead, Salesforce Administrator, Developer, and QA role were handled by me throughout the project.
+| Assigned To | Responsibility |
 |---|---|
-| Project Lead | Coordinate project scope, milestones, documentation, and deliverables. |
-| Salesforce Administrator | Configure Salesforce objects, fields, Lightning App, pages, and access settings. |
-| Salesforce Developer | Implement custom development such as LWC, Apex support, Flow integration, and technical components. |
-| QA / Tester | Validate functionality, test user journeys, identify issues, and verify the final solution. |
+| Sara Salaheddin | Project Planning & Coordination. |
+| Sara Salaheddin | Salesforce Administration & Configuration. |
+| Sara Salaheddin | Salesforce Development. |
+| Sara Salaheddin | Testing & Troubleshooting. |
+| Sara Salaheddin | Documentation & Deliverables. |
 
 ### 1.1.1 Team Communication Protocol
 
-The project follows these communication and coordination practices:
-
-- Track project work through milestones and tasks.
-- Keep implementation decisions and documentation organized.
-- Report blockers and testing issues before final submission.
-- Use consistent Salesforce component and field naming.
-- Keep project deliverables and supporting evidence organized in the project repository.
+As this is an individual project, communication between team members was not applicable. Project activities were instead tracked through the project milestones and tasks, with documentation and deliverables maintained throughout the development process.
 
 ---
 
 ## 1.2 Requirement Gathering and User Stories
+The project focuses on a simplified loan application process. The main idea is to make it easier to collect loan information, store it in Salesforce, review the application, and track its status.
 
-### Project Problem
-
-Loan processing can involve collecting applicant information, reviewing loan requirements, tracking application status, and communicating the next steps. The project addresses this workflow by using Salesforce as the central platform and Agentforce as an AI-powered assistant.
-
-### Project Scope
-
-The solution is designed to support a simplified loan application process. The planned solution includes:
-
-- Loan Application data management.
-- Applicant and loan information capture.
-- Application status tracking.
-- Salesforce Flow automation.
-- Agentforce-based interaction and data collection.
-- Custom Lightning Web Component functionality.
-- Reports and dashboards for loan application visibility.
-- Security and Trust Layer considerations.
+The solution uses Salesforce as the main platform and Agentforce as the AI-powered assistant. The later milestones build on these requirements by adding automation, Agentforce actions, a custom Lightning Web Component, reporting, and security/testing.
 
 ### Core User Stories
 
@@ -74,13 +56,18 @@ The solution is designed to support a simplified loan application process. The p
 
 The initial requirements identify the following core data fields for a basic loan application:
 
-| Field | Purpose | Expected Data |
-|---|---|---|
-| Applicant Name | Identifies the applicant. | Text |
-| Contact | Stores applicant contact information. | Contact information |
-| Loan Amount | Stores the requested loan amount. | Currency |
-| Loan Type | Identifies the type of loan. | Picklist |
-| Application Status | Tracks the current application stage. | Picklist |
+| Field                 | API Name                | Data Type       | Purpose                                                          |
+| --------------------- | ----------------------- | --------------- | ---------------------------------------------------------------- |
+| Applicant Name        | `Applicant_Name__c`     | Text(100)       | Stores the applicant's name.                                     |
+| Contact Email         | `Contact_Email__c`      | Email           | Stores the applicant's contact email.                            |
+| Annual Income         | `Annual_Income__c`      | Currency(16, 2) | Stores the applicant's annual income.                            |
+| Loan Amount           | `Loan_Amount__c`        | Currency(16, 2) | Stores the requested loan amount.                                |
+| Loan Type             | `Loan_Type__c`          | Picklist        | Identifies the type of loan requested.                           |
+| Application Status    | `Application_Status__c` | Picklist        | Tracks the current status of the loan application.               |
+| Employment Status     | `Employment_Status__c`  | Picklist        | Stores the applicant's employment status.                        |
+| Risk Score            | `Risk_Score__c`         | Number(3, 0)    | Stores the risk score associated with the loan application.      |
+| Loan Application Name | `Name`                  | Auto Number     | Provides the unique name/number for the loan application record. |
+
 
 These fields form the minimum information required for the initial loan application process and provide the foundation for the Salesforce data model in M2.
 
@@ -88,20 +75,14 @@ These fields form the minimum information required for the initial loan applicat
 
 ## 1.3 Salesforce Org Setup
 
-A Salesforce development environment is used as the implementation workspace for the project.
+I used a Salesforce Developer Edition org as the development environment for the project. The org was used to build, configure, and test the Loan Processing Assistant.
 
-The environment is used to support:
+The Salesforce environment is the workspace used for the project components, including the Loan Application object, Lightning App, record pages, Flow automation, Agentforce configuration, custom LWC, reports, and dashboards.
 
-- Custom Loan Application configuration.
-- Lightning App and navigation setup.
-- Lightning Record Page configuration.
-- Flow automation.
-- Agentforce configuration.
-- Custom LWC development.
-- Reports and dashboards.
-- Testing and security configuration.
+Salesforce provides the Organization Edition value on the Company Information page. This page can be opened from Setup by searching for Company Information in Quick Find. The Organization Edition value appears in the lower-right area of that page.
 
-The Salesforce environment provides the foundation for progressing from requirements gathering into the data model and application configuration stages.
+<img width="1911" height="692" alt="image" src="https://github.com/user-attachments/assets/485aaa29-1461-45be-8d02-8a9121bc0fab" />
+Setup → Company Information, with Organization Edition visible as Developer Edition.
 
 ---
 
@@ -120,12 +101,12 @@ The Salesforce environment provides the foundation for progressing from requirem
 
 ## M1 Completion Summary
 
-M1 establishes the requirements and project foundation for the **AI-Powered Loan Processing Assistant**. The project scope, user needs, essential data fields, responsibilities, communication approach, and Salesforce implementation environment have been defined.
+M1 defined the starting requirements for the AI-Powered Loan Processing Assistant. The main users, user stories, required loan information, project responsibilities, and Salesforce development environment were identified.
 
-The outputs of this milestone provide the baseline for **M2 — Data Model & Basic UI Setup**, where the identified requirements are translated into Salesforce objects, fields, application navigation, and record page design.
-
+The information collected in this milestone was then used as the basis for M2, where the requirements were implemented in Salesforce through the Loan Application object, custom fields, Lightning App navigation, and the initial record page design.
 **Milestone: M1 — Project Kick-off & Requirements Gathering**
 
 **Status: Completed**
-<img width="1911" height="692" alt="image" src="https://github.com/user-attachments/assets/485aaa29-1461-45be-8d02-8a9121bc0fab" />
-The project was implemented using a Salesforce Developer Edition environment. The Organization Edition was verified through Salesforce Setup → Company Information.
+### Reference
+
+- [Salesforce Help — Find Your Edition](https://help.salesforce.com/s/articleView?id=xcloud.overview_finding_edition.htm&language=en_US)
