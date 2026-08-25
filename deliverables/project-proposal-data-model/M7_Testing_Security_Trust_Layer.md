@@ -1,11 +1,5 @@
----
-generator: pandoc
-title: M7 Testing Security Trust Layer
-viewport: width=device-width, initial-scale=1.0, user-scalable=yes
----
 
-::: {#title-block-header}
-# M7 Testing Security Trust Layer {#m7-testing-security-trust-layer .title}
+# M7 Testing Security Trust Layer
 :::
 
 # M7. Testing, Security & Trust Layer
@@ -126,16 +120,6 @@ the solution.
 The Flow debug/test was also used to check the record creation process
 and confirm that the values were being received by the Flow.
 
-**\[Insert Screenshot --- Agentforce Preview Test\]**
-
-*Figure 7.1. Agentforce Preview used to test the loan application
-conversation.*
-
-**\[Insert Screenshot --- Flow Debug/Test\]**
-
-*Figure 7.2. Flow debug/test used to check the loan application creation
-process.*
-
 ------------------------------------------------------------------------
 
 # 7.2 User Acceptance Testing (UAT) Preparation
@@ -207,10 +191,6 @@ The test is considered successful when:
 -   The created record contains the submitted information.
 -   The application can be viewed through the Salesforce solution.
 
-**\[Insert Screenshot --- UAT / Successful End-to-End Test\]**
-
-*Figure 7.3. Successful end-to-end test used as evidence for the UAT
-scenario.*
 
 ------------------------------------------------------------------------
 
@@ -289,16 +269,6 @@ For this project, the security review considered whether the users
 working with the Loan Application object have the correct permissions
 without giving unnecessary access.
 
-**\[Insert Screenshot --- Loan Application Object Permissions /
-Security\]**
-
-*Figure 7.4. Salesforce security configuration reviewed for the Loan
-Application object.*
-
-**\[Insert Screenshot --- Field-Level Security\]**
-
-*Figure 7.5. Field-level security configuration for Loan Application
-fields.*
 
 ------------------------------------------------------------------------
 
@@ -447,18 +417,3 @@ Salesforce permissions can be used to control that access.
 
 ------------------------------------------------------------------------
 
-# Conclusion
-
-The testing and security review helped confirm that the project is not
-only focused on functionality, but also on how the solution should be
-used in a real Salesforce environment.
-
-The Agentforce assistant is used for conversation and information
-collection, while Salesforce Flow handles the application creation
-process. Salesforce security settings control access to the underlying
-data, and the trust considerations help keep the AI assistant's role
-limited and clear.
-
-The next milestone, **M8 --- Deployment, Presentation & Reflection**,
-will bring the project together for the final documentation,
-presentation, demonstration, and reflection.
