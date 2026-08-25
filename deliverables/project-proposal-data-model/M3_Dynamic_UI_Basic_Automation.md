@@ -30,20 +30,6 @@ The intended behavior is:
 
 This makes the record page more relevant to the current application and reduces unnecessary information on the screen.
 
-### Evidence
-
-Insert a screenshot showing the Dynamic Forms configuration in Lightning App Builder.
-
-**[SCREENSHOT — Dynamic Forms Configuration]**
-
-Insert a screenshot showing the configured visibility condition.
-
-**[SCREENSHOT — Dynamic Visibility Condition]**
-
-Insert a screenshot showing the result on the Loan Application record page.
-
-**[SCREENSHOT — Dynamic Forms / Visibility Result]**
-
 ---
 
 ## 3.2 Dynamic Actions
@@ -60,15 +46,8 @@ The user opens a Loan Application record and can access the configured action fr
 
 The action is part of the record page experience and works together with the application's status field and automation.
 
-### Evidence
+<img width="1917" height="838" alt="image" src="https://github.com/user-attachments/assets/eaa1d561-0761-4297-bdde-449afb84bc7d" />
 
-Insert a screenshot of the Dynamic Action configuration in Lightning App Builder.
-
-**[SCREENSHOT — Dynamic Action Configuration]**
-
-Insert a screenshot showing the action on the Loan Application record page.
-
-**[SCREENSHOT — Dynamic Action on Record Page]**
 
 ---
 
@@ -90,23 +69,10 @@ The basic automation pattern is:
 4. The configured automated action is performed.
 5. The Loan Application continues through the processing lifecycle.
 
-### Evidence
+<img width="1912" height="820" alt="image" src="https://github.com/user-attachments/assets/4132e464-9ad1-4795-b03e-310d623dcad8" />
+<img width="339" height="775" alt="image" src="https://github.com/user-attachments/assets/52f89893-be59-4b3e-a8b4-d2e76d679bee" />
 
-Insert a screenshot of the Record-Triggered Flow in Flow Builder.
 
-**[SCREENSHOT — Record-Triggered Flow]**
-
-Insert a screenshot showing the flow's Start configuration and trigger conditions.
-
-**[SCREENSHOT — Flow Trigger / Start Configuration]**
-
-Insert a screenshot showing the flow's automated action.
-
-**[SCREENSHOT — Flow Automated Action]**
-
-If available, insert a screenshot showing a successful test or debug result.
-
-**[SCREENSHOT — Flow Test / Debug Result]**
 
 ---
 
@@ -147,15 +113,8 @@ The Dynamic UI and automation should be tested using representative Loan Applica
 | Create/update a Loan Application | The Record-Triggered Flow responds according to its trigger configuration. |
 | Change Application Status to Submitted | The configured automation executes the intended action. |
 
-### Evidence
+<img width="1907" height="427" alt="image" src="https://github.com/user-attachments/assets/234aa797-e895-4f73-96e6-2c2b44e21461" />
 
-Insert screenshots of successful tests where available.
-
-**[SCREENSHOT — Dynamic UI Test Result]**
-
-**[SCREENSHOT — Dynamic Action Test Result]**
-
-**[SCREENSHOT — Flow Test Result]**
 
 ---
 
