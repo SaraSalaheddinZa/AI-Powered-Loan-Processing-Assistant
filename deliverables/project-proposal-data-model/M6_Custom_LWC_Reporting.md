@@ -1,8 +1,4 @@
----
-generator: pandoc
-title: "-"
-viewport: width=device-width, initial-scale=1.0, user-scalable=yes
----
+
 
 # M6. Custom LWC & Reporting
 
@@ -103,7 +99,6 @@ to load the active loan applications.
 ::: {#cb2 .sourceCode}
 ``` {.sourceCode .javascript}
 import { LightningElement, wire } from 'lwc';
-
 import getActiveLoans from '@salesforce/apex/LoanController.getActiveLoans';
 
 const COLUMNS = [
@@ -115,7 +110,6 @@ const COLUMNS = [
 ];
 
 export default class LoanProgressTracker extends LightningElement {
-
     loans;
     error;
     columns = COLUMNS;
@@ -184,11 +178,9 @@ the Loan Application Record Page.
 The component appears below the loan information and displays the
 available loan applications in a table.
 
-**\[Insert Screenshot --- Loan Application Record Page with Loan
-Application Tracking LWC\]**
+<img width="1916" height="873" alt="Screenshot 2026-08-24 205625" src="https://github.com/user-attachments/assets/995158db-fa3c-4d24-a68b-cb3470497775" />
+<img width="1430" height="274" alt="Screenshot 2026-08-24 210244" src="https://github.com/user-attachments/assets/823a9f61-b017-4d84-a48d-8b7591d1a888" />
 
-*Figure 6.1. Loan Application Record Page showing the custom Loan
-Application Tracking component.*
 
 ------------------------------------------------------------------------
 
@@ -209,12 +201,8 @@ status.
 The status report helps provide a quick view of how many applications
 are New, In Review, or Rejected.
 
-The report contains **7 records** with a total loan amount of
-**\$1,095,000** in the current sample data.
+<img width="1912" height="812" alt="Screenshot 2026-08-24 211407" src="https://github.com/user-attachments/assets/76fd0513-b4d5-46f1-95f0-c67f55905789" />
 
-**\[Insert Screenshot --- Loan Applications by Status report\]**
-
-*Figure 6.2. Loan Applications grouped by Application Status.*
 
 ------------------------------------------------------------------------
 
@@ -234,9 +222,8 @@ The current sample data contains:
 This report makes it easier to see which loan types represent the
 largest part of the current application data.
 
-**\[Insert Screenshot --- Loan Applications by Loan Type report\]**
+<img width="1909" height="779" alt="image" src="https://github.com/user-attachments/assets/685019fe-de32-4844-91ac-eec23c1765ae" />
 
-*Figure 6.3. Loan Applications grouped by Loan Type.*
 
 ------------------------------------------------------------------------
 
@@ -267,10 +254,8 @@ The dashboard currently shows the following loan-type totals:
 
 The total represented in the reports is **\$1,095,000**.
 
-**\[Insert Screenshot --- Loan Processing Overview dashboard\]**
+<img width="1919" height="416" alt="image" src="https://github.com/user-attachments/assets/36cfe588-3be7-4564-b560-9b9b0ec46ae3" />
 
-*Figure 6.4. Loan Processing Overview dashboard showing loan application
-status and loan type metrics.*
 
 ------------------------------------------------------------------------
 
@@ -302,18 +287,3 @@ status and loan type metrics.*
 
 ------------------------------------------------------------------------
 
-# Result
-
-M6 added a clearer way to monitor the loan applications in the project.
-
-The custom LWC gives users a direct list of the active applications,
-while the reports provide grouped views of the same data. The dashboard
-then gives a quick overview using charts.
-
-Together, these features make the Salesforce application easier to
-monitor and give the user a better view of the current loan processing
-activity.
-
-The next milestone is **M7 --- Testing, Security & Trust Layer**, where
-the solution can be tested more thoroughly and the security and Einstein
-Trust Layer considerations can be documented.
