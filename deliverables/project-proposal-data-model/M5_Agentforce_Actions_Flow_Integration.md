@@ -312,10 +312,3 @@ the **Create Loan Application** action. The action then uses the
 **Create Loan Application Screen Flow - V1** to create the Loan
 Application record.
 
-This was an important step because the Agentforce assistant is no longer
-limited to collecting information. The information collected during the
-conversation can now be used in the Salesforce application process.
-
-The next milestone, **M6 --- Custom LWC & Reporting**, focuses on the
-custom Lightning Web Component, reports, and dashboard used to monitor
-the loan applications.
