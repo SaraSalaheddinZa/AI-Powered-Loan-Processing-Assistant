@@ -128,4 +128,4 @@ The outputs of this milestone provide the baseline for **M2 — Data Model & Bas
 
 **Status: Completed**
 <img width="1911" height="692" alt="image" src="https://github.com/user-attachments/assets/485aaa29-1461-45be-8d02-8a9121bc0fab" />
-
+The project was implemented using a Salesforce Developer Edition environment. The Organization Edition was verified through Salesforce Setup → Company Information.
